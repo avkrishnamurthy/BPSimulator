@@ -1,2 +1,14 @@
 # BPSimulator
-Arduino Code for BP simulator model for Duke Nursing Students
+This was a client project with the Duke School of Nursing. The goal was to create an affordable yet effective alternative to costly blood pressure simulator arms. Traditional training arms for practicing blood pressure measurements come with a significant price tag, limiting access for students who require hands-on experience outside the classroom. Our mission was to design a low-cost prototype that not only replicated the experience of taking blood pressures but also provided the flexibility for students to practice at their convenience, which is not possible with the expensive training arms. The end product needed to provide an authentic experience while remaining cost-effective, allowing nursing students to hone their skills and gain confidence in blood pressure measurement. Our approach combined mechanical aspects with electrical and software components to deliver a practical prototype that was both functional and user-friendly. We developed a unique blood pressure simulator that provided students with a realistic and interactive learning experience. The prototype allowed students to practice the entire process, from cuff inflation to pressure measurement, while receiving real-time feedback through authentic Korotkoff sounds.
+
+## How it works
+The core hardware components of the prototype included an Arduino microcontroller, a force-sensing resistor (FSR) for pressure detection, a 3D-printed arm structure, a speaker, and a button. The prototype was designed to mostly mirror the process of taking an actual blood pressure measurement. The main difference is the setup. Initially, the user would start by placing the blood pressure cuff around the 3D-printed arm. They would then inflate the cuff to the desired systolic pressure, clicking a button to set this pressure as the target. Next, the cuff would be deflated to the desired diastolic pressure, and the button would be clicked again to set this value. This was to correctly calibrate the force-sesnsing resistor, which would otherwise have difficulties with consistency in readings. This essentially establishes a ground-truth, mapping the FSR reading with the true cuff pressure. Then, after fully deflating the cuff, students can then simulate the process of measuring blood pressure by inflating the cuff while listening to the speaker through a stethoscope. The software connected all of these components, programmed in Arduino code, allowing for precise control over the simulation process. The Arduino code was programmed to trigger Korotkoff noises—indicative of real blood pressure readings—when the pressure reached the set systolic and diastolic levels. This was achieved by interfacing with the force-sensing resistor to detect pressure changes.
+
+## See it in action
+[Watch the demo](https://youtu.be/atenNfYbQfc)
+
+## Technologies
+
+<img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/>
+<img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
+
